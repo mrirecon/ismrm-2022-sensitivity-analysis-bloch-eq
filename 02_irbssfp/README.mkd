@@ -1,0 +1,17 @@
+## Software Version
+
+Please ensure to use BART at least in version
+
+	v0.8.00-188-g2619016
+
+The visualization is based on python3. You need to have the packages
+
+	numpy, matplotlib, mpl_toolkits, sys, os 
+
+installed.
+
+## Reproducibility
+
+All simulations run with `./run.sh`.
+
+To run the simulations AND create figures execute: `./run_figs.sh`.

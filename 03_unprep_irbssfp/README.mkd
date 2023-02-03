@@ -1,0 +1,42 @@
+## Software Version
+
+Please ensure to use BART at least in version
+
+	v0.8.00-188-g2619016
+
+The visualization is based on python3. You need to have the packages
+
+	numpy, matplotlib, mpl_toolkits, sys, os 
+
+installed.
+
+## Attention!
+
+An non-prepared IR bSSFP is no standard sequence in BARTs simulation interface.
+Please comment out 
+
+```diff
+diff --git a/src/simu/simulation.c b/src/simu/simulation.c
+index 6fe627cd4..13397c4d2 100644
+--- a/src/simu/simulation.c
++++ b/src/simu/simulation.c
+@@ -901,9 +901,9 @@ void bloch_simulation(const struct sim_data* _data, int R, float (*m_state)[R][3
+ 
+                 // Alpha/2 and TR/2 signal preparation
+ 
+-                if (   (SEQ_BSSFP == data.seq.seq_type)
+-                    || (SEQ_IRBSSFP == data.seq.seq_type))
+-                        alpha_half_preparation(&data, h, tol, N, P, xp);
++                // if (   (SEQ_BSSFP == data.seq.seq_type)
++                //     || (SEQ_IRBSSFP == data.seq.seq_type))
++                //         alpha_half_preparation(&data, h, tol, N, P, xp);
+ 
+                 float mtr[M][M];
+                 float mte[2][M][M];
+```
+
+## Reproducibility
+
+All simulations run with `./run.sh`.
+
+To run the simulations AND create figures execute: `./run_figs.sh`.
