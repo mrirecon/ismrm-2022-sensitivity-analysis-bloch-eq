@@ -1,12 +1,11 @@
 #!/bin/bash
-pip install numpy matplotlib sys os
-
-python -m bash_kernel.install
+pip install bash_kernel numpy matplotlib h5py scipy
 
 git clone https://github.com/mrirecon/bart/
 cd bart
 PARALLEL=1 make
 cd ..
+
 
 
 

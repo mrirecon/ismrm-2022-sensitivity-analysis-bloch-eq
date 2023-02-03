@@ -12,7 +12,7 @@ installed.
 
 ## Attention!
 
-An non-prepared IR bSSFP is no standard sequence in BARTs simulation interface.
+A non-prepared IR bSSFP is no standard sequence in BARTs simulation interface.
 Please comment out 
 
 ```diff
