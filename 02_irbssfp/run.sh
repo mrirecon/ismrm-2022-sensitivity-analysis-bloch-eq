@@ -103,3 +103,12 @@ bart join 6 $(ls tmp/grad_B1_*.cfl | sed -e 's/\.cfl//') ${RESULTS}/grad_B1
 rm ${RESULTS}/h.txt || :
 touch ${RESULTS}/h.txt
 echo "${H[@]}" >> ${RESULTS}/h.txt
+
+
+# Join results for testing
+
+[ -d testing ] && rm -r testing
+mkdir testing
+
+bart join 10 ${RESULTS}/sens_{R1,R2,B1} testing/sens
+bart join 10 ${RESULTS}/grad_{R1,R2,B1} testing/grad
