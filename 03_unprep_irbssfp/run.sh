@@ -89,3 +89,13 @@ bart scale -- $(echo 1 ${DIFF} | awk '{printf "%f\n",$1/$2}') tmp/_diff tmp/_gra
 
 # Scale to convert dFA -> dB1
 bart scale -- $(echo 1 ${FA} | awk '{printf "%f\n",1/($1/$2)}') tmp/_grad ${RESULTS}/grad_B1
+
+
+
+# Join results for testing
+
+[ -d testing ] && rm -r testing
+mkdir testing
+
+bart join 10 ${RESULTS}/sens_{R1,R2,B1} testing/sens
+bart join 10 ${RESULTS}/grad_{R1,R2,B1} testing/grad
