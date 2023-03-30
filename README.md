@@ -11,7 +11,7 @@ This repository reproduces the figures of our work:
 The figures can be reproduced in your browser using a [Jupyter Notebook](reproduce_figures.ipynb).
 Thanks to mybinder.org no installation on your client is required.
 
-Just follow the binder link: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scholand/2022-ismrm-direct-sa-reproducibility/main?filepath=reproduce_figures.ipynb)
+Just follow the binder link: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mrirecon/ismrm-2022-sensitivity-analysis-bloch-eq/main?filepath=reproduce_figures.ipynb)
 and execute the jupyter-notebook cells.
 
 
