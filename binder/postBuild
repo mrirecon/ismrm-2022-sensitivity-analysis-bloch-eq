@@ -3,6 +3,7 @@ pip install bash_kernel numpy matplotlib h5py scipy
 
 git clone https://github.com/mrirecon/bart/
 cd bart
+git checkout v0.8.00
 PARALLEL=1 make
 cd ..
 
